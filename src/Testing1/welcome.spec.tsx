@@ -7,8 +7,7 @@ expect.extend(matchers);
 
 describe("<Welcome />", () => {
   it("mostra proprietà name", () => {
-    const { container } = render(<Welcome name="Alessandro" age={31} />);
-
-    expect(container).toHaveProperty("name=Alessandro");
+    const { container } = render(<Welcome name="Alessandro" />);
+    expect(container).toHaveTextContent("Welcome, Alessandro");
   });
 });
